@@ -44,7 +44,7 @@ Desktop.ini
 .git*
 
 # Utilities #
-#############
+##############
 .jshintrc
 .travis.yml
 .editorconfig
