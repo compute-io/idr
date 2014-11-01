@@ -1,4 +1,6 @@
 TODO
 ====
 
+Min array size?
+
 

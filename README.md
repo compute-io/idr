@@ -2,7 +2,7 @@ idr
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Computes the interdecile range of an array of values.
+> Computes the interdecile range (idr) for an array of values.
 
 
 ## Installation
@@ -19,14 +19,20 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'compute-idr' );
+var idr = require( 'compute-idr' );
 ```
 
 
 ## Examples
 
 ``` javascript
-var lib = require( 'compute-idr' );
+var data = new Array( 100 );
+
+for ( var i = 0; i < data.length; i++ ) {
+    data[i] = Math.round( Math.random()*100 );
+}
+
+console.log( idr( data ) );
 ```
 
 To run the example code from the top-level application directory,
