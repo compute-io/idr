@@ -24,7 +24,7 @@ var idr = require( 'compute-idr' );
 
 #### idr( arr[, sorted] )
 
-Computes the interdecile range provided an input `array`. If the input `array` is already `sorted`, set the `boolean` flag to `true`.
+Computes the interdecile range provided an input `array`. If the input `array` is already `sorted` in __ascending__ order, set the `boolean` flag to `true`.
 
 ``` javascript
 var unsorted = [ 8, 2, 3, 9, 5, 1, 4, 10, 7, 0, 6 ],
