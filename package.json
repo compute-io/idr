@@ -37,7 +37,10 @@
     "idr",
     "stats",
     "statistics",
-    "decile"
+    "decile",
+    "quantiles",
+    "percentiles",
+    "dispersion"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/idr/issues"
