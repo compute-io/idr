@@ -11,7 +11,7 @@
       "name": "Rebekah Smith",
       "email": "rebekahjs17@gmail.com"
     },
-        {
+    {
       "name": "Athan Reines",
       "email": "kgryte@gmail.com"
     }
@@ -42,7 +42,9 @@
   "bugs": {
     "url": "https://github.com/compute-io/idr/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "compute-quantile": "^1.0.0"
+  },
   "devDependencies": {
     "chai": "1.x.x",
     "mocha": "1.x.x",

@@ -2,7 +2,7 @@ Interdecile Range
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Computes the interdecile range (idr) for an array of values.
+> Computes the [interdecile range](http://en.wikipedia.org/wiki/Interdecile_range) (idr) for an array of values.
 
 
 ## Installation
@@ -30,10 +30,10 @@ Computes the interdecile range provided an input `array`. If the input `array` i
 var unsorted = [ 8, 2, 3, 9, 5, 1, 4, 10, 7, 0, 6 ],
 	sorted = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 
-idr( unsorted );
+var r1 = idr( unsorted );
 // returns 8
 
-idr( sorted, true );
+var r2 = idr( sorted, true );
 // returns 8
 ```
 
@@ -55,6 +55,10 @@ To run the example code from the top-level application directory,
 ``` bash
 $ node ./examples/index.js
 ```
+
+## Notes
+
+If the input `array` is not sorted in __ascending__ order, the function is `O( N log( N ) )`. If the input `array` is sorted, the function is `O(1)`.
 
 
 ## Tests
