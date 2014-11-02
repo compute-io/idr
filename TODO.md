@@ -1,6 +1,6 @@
 TODO
 ====
 
-Min array size?
+1. 	Min array size?
 
 
