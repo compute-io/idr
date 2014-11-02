@@ -22,20 +22,27 @@ To use the module,
 var idr = require( 'compute-idr' );
 ```
 
-#### idr( arr[, sorted] )
+#### idr( arr[, opts] )
 
-Computes the interdecile range provided an input `array`. If the input `array` is already `sorted` in __ascending__ order, set the `boolean` flag to `true`.
+Computes the interdecile range provided an input `array`.
 
 ``` javascript
-var unsorted = [ 8, 2, 3, 9, 5, 1, 4, 10, 7, 0, 6 ],
-	sorted = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+var unsorted = [ 8, 2, 3, 9, 5, 1, 4, 10, 7, 0, 6 ];
 
-var r1 = idr( unsorted );
-// returns 8
-
-var r2 = idr( sorted, true );
+var r = idr( unsorted );
 // returns 8
 ```
+
+If the input `array` is already `sorted` in __ascending__ order, set the `sorted` flag to `true`.
+
+``` javascript
+var sorted = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+
+var r = idr( sorted, {'sorted': true} );
+// returns 8
+```
+
+Additional options are the same the [quantile](https://github.com/compute-io/quantile) module.
 
 
 ## Examples

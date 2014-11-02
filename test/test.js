@@ -41,12 +41,12 @@ describe( 'compute-idr', function tests() {
 
 		function badValue( value ) {
 			return function() {
-				idr( value, true );
+				idr( value, {} );
 			};
 		}
 	});
 
-	it( 'should throw an error if provided a non-boolean for the second argument', function test() {
+	it( 'should throw an error if provided options is not an object', function test() {
 		var values = [
 			'5',
 			5,
@@ -55,7 +55,7 @@ describe( 'compute-idr', function tests() {
 			null,
 			NaN,
 			function(){},
-			{}
+			true
 		];
 
 		for ( var i = 0; i < values.length; i++ ) {
@@ -82,7 +82,7 @@ describe( 'compute-idr', function tests() {
 		data.sort( function sort( a, b ) {
 			return a - b;
 		});
-		assert.strictEqual( idr( data, true ), expected );
+		assert.strictEqual( idr( data, {'sorted': true} ), expected );
 
 		// 1st decile: -2, 9th decile: 8,  idr: 10
 		data = [ 3, -5, 2, 9, 6, 1, -2, 7, 7, 3, 6, 4, 8 ];
