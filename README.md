@@ -1,4 +1,4 @@
-idr
+Interdecile Range
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -22,6 +22,21 @@ To use the module,
 var idr = require( 'compute-idr' );
 ```
 
+#### idr( arr[, sorted] )
+
+Computes the interdecile range provided an input `array`. If the input `array` is already `sorted`, set the `boolean` flag to `true`.
+
+``` javascript
+var unsorted = [ 8, 2, 3, 9, 5, 1, 4, 10, 7, 0, 6 ],
+	sorted = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+
+idr( unsorted );
+// returns 8
+
+idr( sorted, true );
+// returns 8
+```
+
 
 ## Examples
 
@@ -29,7 +44,7 @@ var idr = require( 'compute-idr' );
 var data = new Array( 100 );
 
 for ( var i = 0; i < data.length; i++ ) {
-    data[i] = Math.round( Math.random()*100 );
+    data[ i ] = Math.round( Math.random()*100 );
 }
 
 console.log( idr( data ) );
@@ -66,7 +81,7 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
