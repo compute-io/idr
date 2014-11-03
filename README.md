@@ -42,7 +42,7 @@ var r = idr( sorted, {'sorted': true} );
 // returns 8
 ```
 
-Additional options are the same the [quantile](https://github.com/compute-io/quantile) module.
+Additional options are the same as for the [quantile](https://github.com/compute-io/quantile) module.
 
 
 ## Examples
